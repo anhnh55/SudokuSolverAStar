@@ -30,7 +30,7 @@ struct SudokuBoard
 
 struct compare_f_value
 {
-	bool operator()(const SudokuBoard b1, const SudokuBoard b2)
+	bool operator()(const SudokuBoard b1, const SudokuBoard b2) const
 	{
 		if(b2.m_i_value_f < b1.m_i_value_f)
 			return true;
@@ -53,7 +53,7 @@ struct compare_f_value
 
 struct compare_sudoku_board
 {
-	bool operator()(SudokuBoard b1, SudokuBoard b2)
+	bool operator()(SudokuBoard b1, SudokuBoard b2) const
 	{
 		for(int i = 0 ; i < 9 ; i++)
 		{
